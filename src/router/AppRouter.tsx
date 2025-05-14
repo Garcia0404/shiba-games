@@ -8,7 +8,7 @@ import { Games } from "./pages/games/Games"
 
 export const AppRouter = () => {
   return (
-    <div className="bg-black text-white flex flex-col">
+    <div className="bg-black text-white flex flex-col pt-16 overflow-x-hidden">
       <Header />
       <Routes>
         <Route path="/" element={<App />} />

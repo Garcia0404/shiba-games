@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 
 export const Header = () => {
   return (
-    <header className="border-b border-zinc-800 bg-[rgba(0,0,0,0.8)] z-40 backdrop-blur-2xl sticky top-0 w-full">
+    <header className="border-b border-zinc-800 bg-[rgba(0,0,0,0.8)] z-40 backdrop-blur-2xl fixed top-0 w-screen">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">

@@ -7,6 +7,8 @@ export const Menu = () => {
   
   const handleClick = () => {
     setIsOpen(prev => !prev)
+    if(!isOpen) document.documentElement.classList.add("overflow-y-hidden")
+    else document.documentElement.classList.remove("overflow-y-hidden")
   }
 
   return (
@@ -26,13 +28,13 @@ export const Menu = () => {
       <div className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
         {/* Overlay */}
         <div 
-          className={`absolute inset-0 bg-black transition-opacity h-screen duration-300 ${isOpen ? 'opacity-80' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-black transition-opacity h-dvh duration-300 ${isOpen ? 'opacity-80' : 'opacity-0'}`}
           onClick={handleClick}
         ></div>
         
         {/* Contenido del menú */}
         <div 
-          className={`absolute top-0 right-0 w-[min(100%,320px)] h-screen bg-zinc-950 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`absolute top-0 right-0 w-[min(100%,320px)] h-dvh bg-zinc-950 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
         >
           {/* Botón de cerrar */}
           <button 
