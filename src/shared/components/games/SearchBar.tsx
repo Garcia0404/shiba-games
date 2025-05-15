@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import type { Game } from "../../../features/games/types";
+import { searchGames } from "../../../features/games/utils/games";
 
-export const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("")
-
-  const handleSubmit = (e: React.FormEvent) => {
+interface Props {
+  search: string
+  setSearch: (search: string) => void
+  filteredGames: Game[]
+  setFilteredGames: (filteredGames: Game[]) => void
+}
+export const SearchBar = ({ search, setSearch, filteredGames, setFilteredGames }: Props) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí iría la lógica de búsqueda
-    console.log("Buscando:", searchTerm)
-  }
+    if (search.length === 0) return setFilteredGames(filteredGames)
+    if (!search.trim()) return
+    const gamesUpdated = searchGames(filteredGames, search)
+    setFilteredGames(gamesUpdated)
+    console.log("Buscando:", search);
+  };
 
   return (
     <form onSubmit={handleSubmit} className="flex-grow max-w-xl h-full">
@@ -21,8 +29,8 @@ export const SearchBar = () => {
           type="search"
           className="block w-full p-2 pl-10 text-sm bg-[#1a1a1a90] rounded-lg focus:ring-1 focus:ring-main focus:outline-none transition-all"
           placeholder="Buscar juegos, categorías..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           aria-label="Buscar juegos"
         />
       </div>

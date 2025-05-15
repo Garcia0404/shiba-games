@@ -1,8 +1,10 @@
 interface CategoryProps {
-  children: React.ReactNode;
+  categories: string[]
 }
-export const Category = ({ children }: CategoryProps) => {
+export const Category = ({ categories }: CategoryProps) => {
   return (
-    <span className='text-white/50 text-sm'>{children}</span>
+    <div className='flex gap-3 text-white/50 text-sm'>{
+      categories.map((category, index) => (<span key={index}>{category}</span>))
+    }</div>
   )
 }

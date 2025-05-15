@@ -6,7 +6,7 @@ export interface Game {
   price: number;
   discount: number;
   description: string;
-  category: string;
+  category: string[];
   image: string;
   trailer: string;
 }

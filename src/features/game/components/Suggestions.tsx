@@ -11,7 +11,7 @@ export const Suggestions = () => {
       "price": 9.90,
       "discount": 15,
       "description": "A mysterious, atmospheric walking simulator full of secrets and quiet beauty.",
-      "category": "Indie",
+      "category": ["Indie"],
       "image": "https://zeroxgames.gg/cdn/shop/files/midgniht.jpg?v=1746724089",
       "trailer": "https://www.youtube.com/watch?v=xBlnqvvSqQc"
     },
@@ -22,7 +22,7 @@ export const Suggestions = () => {
       "price": 35.00,
       "discount": 22,
       "description": "Rip and tear in medieval chaos with this brutal new chapter in the DOOM saga.",
-      "category": "FPS",
+      "category": ["FPS"],
       "image": "https://zeroxgames.gg/cdn/shop/files/doom.jpg?v=1746491650",
       "trailer": "https://www.youtube.com/watch?v=s1i3YfGl5ag"
     },
@@ -33,7 +33,7 @@ export const Suggestions = () => {
       "price": 19.90,
       "discount": 25,
       "description": "A surreal turn-based RPG with breathtaking art and an emotional story.",
-      "category": "RPG",
+      "category": ["RPG"],
       "image": "https://zeroxgames.gg/cdn/shop/files/clair_obscur.jpg?v=1745424031",
       "trailer": "https://www.youtube.com/watch?v=wWGIakhqr5g"
     },
@@ -44,7 +44,7 @@ export const Suggestions = () => {
       "price": 19.90,
       "discount": 20,
       "description": "Return to Cyrodiil with enhanced visuals and classic RPG gameplay.",
-      "category": "RPG",
+      "category": ["RPG"],
       "image": "https://zeroxgames.gg/cdn/shop/files/obvlion.png?v=1745350785",
       "trailer": "https://www.youtube.com/watch?v=wFJ3PZuAjK4"
     },
@@ -55,7 +55,7 @@ export const Suggestions = () => {
       "price": 42.90,
       "discount": 30,
       "description": "Get the complete story of Joel and Ellie in this emotional two-game bundle.",
-      "category": "Action-Adventure",
+      "category": ["Action", "Adventure"],
       "image": "https://zeroxgames.gg/cdn/shop/files/tloupac.png?v=1743695176",
       "trailer": "https://www.youtube.com/watch?v=AE67zDoBd7s"
     }
