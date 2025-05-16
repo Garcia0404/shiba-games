@@ -19,7 +19,7 @@ export const Game = () => {
   const game = uuid ? getGame(games, uuid) : null
   useEffect(() => {
     window.scrollTo({
-      top: 0,
+      top: 0
     })
   }, [uuid])
   if (isLoading) {
@@ -29,14 +29,14 @@ export const Game = () => {
   if (game === undefined) return <NotFound />
   if (!game) return null
   return (
-    <main style={{ background: `url(${game.image}) center/cover no-repeat`}} className="z-0 relative min-h-screen bg-[#121212] text-white pb-8">
+    <main style={{ background: `url(/images/${game.uuid}.webp) center/cover no-repeat`}} className="z-0 relative min-h-screen bg-[#121212] text-white pb-8 transition-all duration-600 ease-in-out">
       <div className="absolute left-0 right-0 w-full h-12 -translate-y-4 bg-black -z-10"></div>
       <div className="container mx-auto px-4 md:px-4 z-10">
         <div className="mt-4">
           <Breadcrumbs title={game.title} />
         </div>
-        <div className='min-h-[681.79px] flex flex-col md:grid md:grid-cols-12 pt-4 sm:p-6 md:p-10 gap-4 md:gap-10'>
-          <GameImage image={game.image} title={game.title} />
+        <div className='min-h-150 flex flex-col md:grid md:grid-cols-12 pt-4 max-sm:p-6 md:py-10 lg:px-10 gap-4 md:gap-10'>
+          <GameImage image={`/images/${uuid}.webp`} title={game.title} />
           <div className='flex flex-col gap-3 flex-1 col-start-6 col-end-13 xl:col-end-12'>
             <div className="flex justify-between items-center">
               <Category categories={game.category} />
@@ -48,7 +48,7 @@ export const Game = () => {
             <Trailer trailer={game.trailer} />
           </div>
         </div>
-        <Suggestions />
+        <Suggestions currentId={game.uuid} games={games} categories={game.category}/>
       </div>
       <div className="absolute w-full h-full top-0 -z-10 backdrop-blur-2xl" style={{ backgroundColor: 'rgba(0,0,0,0.8)' }}></div>
     </main >

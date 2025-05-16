@@ -5,11 +5,11 @@ export const Logo = () => {
       <img
         src="/logo.png"
         alt="Shiba Games logo"
-        width={150}
-        height={30}
+        width={48}
+        height={48}
         className="h-12 w-auto"
       />
-      <span className="text-xl font-extrabold text-[#c31b1b9d]">SHIBA</span>
+      <span className="text-xl font-extrabold text-[#C70039]">SHIBA</span>
     </Link>
   )
 }

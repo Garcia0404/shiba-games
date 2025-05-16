@@ -9,8 +9,8 @@ export const GameImage = ({ image, title, children }: GameImageProps) => {
       <img
         src={image}
         alt={title}
-        width={200}
-        height={250}
+        width={184}
+        height={276}
         className="w-full h-auto object-cover transition-transform group-hover:scale-[1.03] duration-500"
       />
       {children}

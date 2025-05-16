@@ -9,4 +9,5 @@ export interface Game {
   category: string[];
   image: string;
   trailer: string;
+  popularity:number
 }

@@ -6,13 +6,14 @@ export const Banner = () => {
     setIsLoaded(true);
   };
   return (
-    <section aria-labelledby="hero-heading" className="bg-black relative">
+    <section aria-labelledby="hero-heading" className="bg-[url(/banner/banner1.webp)] z-0 bg-cover relative">
+      <div className="absolute top-0 w-full h-full backdrop-blur-2xl -z-10"></div>
       <img onLoad={handleLoad}
-        className="w-full transition-opacity duration-300 ease-out min-h-40 object-left object-cover"
+        className="h-full w-full mx-auto max-h-120 transition-opacity duration-300 ease-out min-h-40 object-center object-cover"
         style={{
           opacity: isLoaded ? 1 : 0,
         }}
-        src="https://zeroxgames.gg/cdn/shop/files/KHAZAN_WEB.png?v=1744415416&width=3000" 
+        src="/banner/banner1.webp" 
         width={1024} height={330.75} alt="banner_1" fetchPriority="high" />
       <div className="w-full h-6 bg-[rgba(0,0,0,0.5)] flex gap-4 items-center justify-center absolute bottom-0 backdrop-blur-2xl">
         <button aria-label="preview-image" className="cursor-pointer">

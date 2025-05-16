@@ -8,7 +8,7 @@ export const FeaturedGame = () => {
           <div className="flex flex-col md:flex-row container mx-auto px-4">
             <div className="md:w-1/3">
               <img
-                src="https://zeroxgames.gg/cdn/shop/files/minecraftsinfondo.png?v=1744158947&width=1200"
+                src="/minecraft.webp"
                 alt="Minecraft Java & Bedrock"
                 width={300}
                 height={300}
@@ -25,7 +25,7 @@ export const FeaturedGame = () => {
               </p>
               <div className="mt-4 flex items-center gap-4">
                 <span className="text-2xl font-bold">S/ 19.99</span>
-                <Link target="_BLANK" to={`https://wa.me/${import.meta.env.VITE_PHONE_NUMBER}`} className="cursor-pointer bg-main text-white/60 duration-250 px-4 py-2 rounded-md font-medium hover:bg-[#8d2c19] transition-colors">
+                <Link target="_BLANK" to={`https://wa.me/${import.meta.env.VITE_PHONE_NUMBER}`} className="cursor-pointer bg-[#FF5733] text-black duration-250 px-4 py-2 rounded-md font-medium hover:bg-[#8d2c19] transition-colors">
                   Comprar ahora
                 </Link>
               </div>

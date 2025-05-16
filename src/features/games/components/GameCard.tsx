@@ -11,7 +11,7 @@ export const GameCard = ({ game }: GameCardProps) => {
   return (
     <article className="group relative h-full bg-[#1a1a1a63] shadow-sm rounded-lg overflow-hidden border border-white/10">
       <Link to={`/games/${game.uuid}`} className='flex flex-col h-full flex-1'>
-        <GameImage image={game.image} title={game.title}>
+        <GameImage image={`/images/${game.uuid}.webp`} title={game.title}>
           <GameDiscount discount={game.discount} />
         </GameImage>
         <div className="p-3 flex flex-col flex-1">
