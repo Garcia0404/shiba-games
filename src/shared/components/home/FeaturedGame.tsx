@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 
 export const FeaturedGame = () => {
   return (
@@ -24,9 +25,9 @@ export const FeaturedGame = () => {
               </p>
               <div className="mt-4 flex items-center gap-4">
                 <span className="text-2xl font-bold">S/ 19.99</span>
-                <button className="bg-main text-black px-4 py-2 rounded-md font-medium hover:bg-green-400 transition-colors">
+                <Link target="_BLANK" to={`https://wa.me/${import.meta.env.VITE_PHONE_NUMBER}`} className="cursor-pointer bg-main text-white/60 duration-250 px-4 py-2 rounded-md font-medium hover:bg-[#8d2c19] transition-colors">
                   Comprar ahora
-                </button>
+                </Link>
               </div>
             </div>
           </div>
