@@ -35,7 +35,7 @@ export const Game = () => {
         <div className="mt-4">
           <Breadcrumbs title={game.title} />
         </div>
-        <div className='min-h-150 flex flex-col md:grid md:grid-cols-12 pt-4 max-sm:p-6 md:py-10 lg:px-10 gap-4 md:gap-10'>
+        <div className='min-h-150 flex flex-col md:grid md:grid-cols-12 pt-4 max-sm:px-0 max-md:p-6 md:py-10 lg:px-10 gap-4 md:gap-10'>
           <GameImage image={`/images/${uuid}.webp`} title={game.title} />
           <div className='flex flex-col gap-3 flex-1 col-start-6 col-end-13 xl:col-end-12'>
             <div className="flex justify-between items-center">
