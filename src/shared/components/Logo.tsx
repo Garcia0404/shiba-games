@@ -9,7 +9,7 @@ export const Logo = () => {
         height={30}
         className="h-12 w-auto"
       />
-      <span className="text-xl font-extrabold text-[#ff00009d]">SHIBA</span>
+      <span className="text-xl font-extrabold text-[#c31b1b9d]">SHIBA</span>
     </Link>
   )
 }
