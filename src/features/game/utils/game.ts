@@ -19,3 +19,13 @@ type UUID = `${string}-${string}-${string}-${string}-${string}`;
 export const getGame = (games: Game[], uuid: UUID) => {
   return games.find((game) => game.uuid === uuid);
 };
+export const likedGame = async (uuid: UUID) => {
+  const URL = import.meta.env.VITE_API_URL;
+  try {
+    const response = await fetch(URL + `vote?by=${uuid}`, { method: "POST" });
+    if (!response.ok)
+      console.error("Tu voto ya fué enviado");
+  } catch (e) {
+    console.error(e);
+  }
+};
