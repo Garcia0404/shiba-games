@@ -3,8 +3,9 @@ import { Banner } from "./shared/components/home/Banner"
 import { FeaturedGame } from "./shared/components/home/FeaturedGame"
 import { Features } from "./shared/components/home/Features"
 import { Latest } from "./shared/components/home/Latest"
-import { MostSold } from "./shared/components/home/MostSold"
 import { Popular } from "./shared/components/home/Popular"
+import { Offers } from "./shared/components/home/Offers"
+
 import { Subtitle } from "./shared/components/home/Subtitle"
 import { BackgroundGradient } from "./shared/components/ui/BackgroundGradient"
 export default function App() {
@@ -20,8 +21,8 @@ export default function App() {
       {/* Best Sellers - Semántico con <section>, <h2> y <article> para cada juego */}
       <section aria-labelledby="bestsellers-heading" className="py-8">
         <div className="container mx-auto px-4">
-          <Subtitle>LOS MÁS VENDIDOS</Subtitle>
-          <MostSold />
+          <Subtitle>MÁS POPULARES</Subtitle>
+          <Popular />
         </div>
       </section>
 
@@ -29,7 +30,7 @@ export default function App() {
       <section aria-labelledby="offers-heading" className="py-8">
         <div className="container mx-auto px-4">
           <Subtitle>OFERTAS ESPECIALES</Subtitle>
-          <Popular />
+          <Offers />
         </div>
       </section>
 

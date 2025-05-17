@@ -1,17 +1,17 @@
+import { useAppContext } from "../../../context/AppContext";
 import { GameCard } from "../../../features/games/components/GameCard"
 import type { Game } from "../../../features/games/types";
 import { Loader } from "../ui/Loader"
 import backupGames from "../../../../public/data/games.json";
-import { useAppContext } from "../../../context/AppContext";
 
-const MAX_GAMES = 5;
+const MAX_GAMES = 10;
 
 function getSortedGames(games: Game[]) {
   return [...games]
-    .reverse()
+    .sort((a, b) => (b.discount ?? 0) - (a.discount ?? 0))
     .slice(0, MAX_GAMES);
 }
-export const Latest = () => {
+export const Offers = () => {
   const { games, isLoading, error } = useAppContext();
 
   if (isLoading) {
